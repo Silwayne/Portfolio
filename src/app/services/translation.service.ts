@@ -57,9 +57,9 @@ export class TranslationService {
       'contact.form.email': 'Deine E-Mail *',
       'contact.form.message': 'Deine Nachricht *',
       'contact.form.privacy.prefix':
-        'Ich stimme zu, dass meine Daten gemäß der',
+        'Ich stimme zu, dass meine Daten gemäß der ',
       'contact.form.privacy.link': 'Datenschutzerklärung',
-      'contact.form.privacy.suffix': 'verarbeitet werden dürfen. *',
+      'contact.form.privacy.suffix': ' verarbeitet werden dürfen. ',
       'contact.form.submit': 'Nachricht senden',
       'contact.successMessage': 'Vielen Dank! Deine Nachricht wurde gesendet.',
 
@@ -213,9 +213,9 @@ export class TranslationService {
       'contact.form.email': 'Your Email *',
       'contact.form.message': 'Your Message *',
       'contact.form.privacy.prefix':
-        'I agree that my data may be processed in accordance with the',
+        'I agree that my data may be processed in accordance with the ',
       'contact.form.privacy.link': 'Privacy Policy',
-      'contact.form.privacy.suffix': '.*',
+      'contact.form.privacy.suffix': '.',
       'contact.form.submit': 'Send Message',
       'contact.successMessage': 'Thank you! Your message has been sent.',
 
