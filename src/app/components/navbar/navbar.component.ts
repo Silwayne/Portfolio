@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-
   isMenuOpen = false;
 
   toggleMenu() {
@@ -21,4 +21,10 @@ export class NavbarComponent {
     document.body.style.overflow = '';
   }
 
+  constructor(public translation: TranslationService) {}
+
+  changeLanguage(lang: 'de' | 'en') {
+    this.translation.setLanguage(lang);
+    this.closeMenu();
+  }
 }

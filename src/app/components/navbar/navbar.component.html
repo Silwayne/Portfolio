@@ -2,13 +2,13 @@
       <div class="nav-container">
         <a href="#" class="nav-logo" data-i18n="nav.logo">Ronny Pollmer</a>
         <div class="nav-menu" [class.active]="isMenuOpen">
-          <a href="#about" class="nav-link" (click)="closeMenu()" data-i18n="nav.about">Über mich</a>
-          <a href="#skills" class="nav-link" (click)="closeMenu()" data-i18n="nav.skills">Fähigkeiten</a>
-          <a href="#projects" class="nav-link" (click)="closeMenu()" data-i18n="nav.projects">Projekte</a>
-          <a href="#contact" class="nav-link" (click)="closeMenu()" data-i18n="nav.contact">Kontakt</a>
+          <a href="#about" class="nav-link" (click)="closeMenu()">{{ translation.t('nav.about') }}</a>
+          <a href="#skills" class="nav-link" (click)="closeMenu()">{{ translation.t('nav.skills') }}</a>
+          <a href="#projects" class="nav-link" (click)="closeMenu()">{{ translation.t('nav.projects') }}</a>
+          <a href="#contact" class="nav-link" (click)="closeMenu()">{{ translation.t('nav.contact') }}</a>
           <div class="language-toggle">
-            <button class="lang-btn active" (click)="closeMenu()" data-lang="de">DE</button>
-            <button class="lang-btn" (click)="closeMenu()" data-lang="en">EN</button>
+            <button class="lang-btn" (click)="closeMenu()" [class.active]="translation.currentLang === 'de'" (click)="changeLanguage('de')">DE</button>
+            <button class="lang-btn" (click)="closeMenu()" [class.active]="translation.currentLang === 'en'" (click)="changeLanguage('en')">EN</button>
           </div>
           <div class="nav-social">
             <a href="https://www.linkedin.com/in/ronny-pollmer-1b7886334/" target="_blank" class="social-icon" (click)="closeMenu()" aria-label="LinkedIn">
