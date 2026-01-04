@@ -23,10 +23,10 @@ export class ContactComponent {
   };
 
   showSuccess = false;
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'placeholder-endpoint-url',
+    endPoint: 'https://ronny-pollmer.com/send_mail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

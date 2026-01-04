@@ -9,8 +9,10 @@ $shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 $shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.45);
 $border-radius: 20px;
 $transition: all 0.3s ease;
-$font-raleway: "Raleway", sans-serif;
-$font-ubuntu: "Ubuntu", sans-serif;
+$font-raleway: "Raleway",
+sans-serif;
+$font-ubuntu: "Ubuntu",
+sans-serif;
 
 @mixin flex-center($direction: row, $justify: center, $align: center) {
   display: flex;
@@ -74,10 +76,10 @@ $font-ubuntu: "Ubuntu", sans-serif;
   transition: $transition;
   padding: 0 5px;
 
-  .form-group input:focus + &,
-  .form-group textarea:focus + &,
-  .form-group input:not(:placeholder-shown) + &,
-  .form-group textarea:not(:placeholder-shown) + & {
+  .form-group input:focus+&,
+  .form-group textarea:focus+&,
+  .form-group input:not(:placeholder-shown)+&,
+  .form-group textarea:not(:placeholder-shown)+& {
     top: -10px;
     left: 10px;
     font-size: 0.8rem;
@@ -87,12 +89,19 @@ $font-ubuntu: "Ubuntu", sans-serif;
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
@@ -559,7 +568,7 @@ section {
 }
 
 #contact {
-  .info > p {
+  .info>p {
     max-width: 600px;
     margin: 2rem auto 2rem;
     text-align: center;
@@ -626,12 +635,16 @@ section {
       font-size: 1rem;
       transition: $transition;
       box-shadow: $shadow;
+      outline: none;
 
-      &:focus {
-        outline: none;
-        border-color: $secondary-color;
-        box-shadow: $shadow-hover;
-        background-color: $hover-color;
+      &:focus+label,
+      &:not(:placeholder-shown)+label {
+        top: -12px;
+        left: 10px;
+        font-size: 0.8rem;
+        background-color: var(--primary-color);
+        padding: 0 5px;
+        color: var(--secondary-color);
       }
     }
 
@@ -858,6 +871,7 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+
   .nav-container,
   .card,
   .footer-content,
