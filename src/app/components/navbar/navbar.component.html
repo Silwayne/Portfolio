@@ -1,6 +1,7 @@
 <nav class="navbar">
   <div class="nav-container">
-    <a href="#" class="nav-logo" data-i18n="nav.logo">Ronny Pollmer</a>
+    <a class="nav-logo" (click)="closeMenu()" [routerLink]="['/']" fragment="contact">Ronny Pollmer
+    </a>
     <div class="nav-menu" [class.active]="isMenuOpen">
       <a class="nav-link" (click)="closeMenu()" [routerLink]="['/']" fragment="about">{{ translation.t("nav.about") }}</a>
       <a class="nav-link" (click)="closeMenu()" [routerLink]="['/']" fragment="skills">{{ translation.t("nav.skills") }}</a>

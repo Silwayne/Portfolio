@@ -17,7 +17,7 @@ a:hover {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--accent-color);
-  text-align: left; 
+  text-align: left;
 }
 
 .legal-section:last-child {
@@ -77,18 +77,24 @@ a:hover {
   margin-top: 0.2rem;
 }
 
-.back-home {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
 .back-home .hero-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid var(--secondary-color);
+  margin-top: 3rem;
   gap: 0.5rem;
   padding: 12px 24px;
   font-size: 1rem;
+}
+
+.back-home .hero-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 main {
@@ -108,13 +114,14 @@ section {
   font-size: 2rem !important;
   margin-bottom: 0.5rem !important;
 }
+
 .card {
-  max-width: 1000px; 
-  margin: 0 auto !important; 
+  max-width: 1000px;
+  margin: 0 auto !important;
   padding: 40px !important;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
 .card .info {
@@ -125,41 +132,41 @@ section {
   font-size: 1.5rem !important;
   margin-bottom: 2rem !important;
   text-align: left !important;
-  width: 100%; 
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
   main {
     padding: 10px;
   }
-  
+
   section {
     padding: 20px 10px !important;
   }
-  
+
   .card {
     padding: 20px !important;
   }
-  
+
   .section-header h1 {
     font-size: 1.8rem !important;
   }
-  
+
   .legal-section h3 {
     font-size: 1.2rem;
   }
-  
+
   .legal-section h4 {
     font-size: 1rem;
   }
-  
+
   .legal-section p,
   .legal-section ul,
   .legal-section li,
   .contact-item {
     font-size: 0.95rem;
   }
-  
+
   .card .info h2 {
     font-size: 1.3rem !important;
   }
@@ -169,26 +176,26 @@ section {
   .card {
     padding: 15px !important;
   }
-  
+
   .section-header h1 {
     font-size: 1.5rem !important;
   }
-  
+
   .legal-section h3 {
     font-size: 1.1rem;
   }
-  
+
   .legal-section p,
   .legal-section ul,
   .legal-section li {
     font-size: 0.7rem;
   }
-  
+
   .contact-item {
     flex-direction: column;
     gap: 0.3rem;
   }
-  
+
   .contact-item i {
     margin-top: 0;
   }
