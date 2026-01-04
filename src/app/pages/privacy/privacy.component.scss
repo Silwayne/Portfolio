@@ -1,0 +1,196 @@
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.legal-content {
+  width: 100%;
+  margin: 0; 
+}
+
+.legal-section {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--accent-color);
+  text-align: left; 
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.legal-section h3 {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.legal-section h4 {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin: 1.2rem 0 0.8rem 0;
+  text-align: left;
+  font-weight: 500;
+}
+
+.legal-section p {
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.legal-section ul {
+  color: var(--text-color);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.legal-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.contact-item i {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-top: 0.2rem;
+}
+
+.back-home {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.back-home .hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+main {
+  min-height: calc(100vh - 70px - 300px);
+  padding: 20px;
+}
+
+section {
+  padding: 40px 20px !important;
+}
+
+.section-header {
+  margin-bottom: 2rem !important;
+}
+
+.section-header h1 {
+  font-size: 2rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.card {
+  max-width: 1000px; 
+  margin: 0 auto !important; 
+  padding: 40px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.card .info {
+  width: 100%;
+}
+
+.card .info h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  text-align: left !important;
+  width: 100%; 
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  
+  section {
+    padding: 20px 10px !important;
+  }
+  
+  .card {
+    padding: 20px !important;
+  }
+  
+  .section-header h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .legal-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .legal-section h4 {
+    font-size: 1rem;
+  }
+  
+  .legal-section p,
+  .legal-section ul,
+  .legal-section li,
+  .contact-item {
+    font-size: 0.95rem;
+  }
+  
+  .card .info h2 {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 15px !important;
+  }
+  
+  .section-header h1 {
+    font-size: 1.3rem !important;
+  }
+  
+  .legal-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .legal-section p,
+  .legal-section ul,
+  .legal-section li {
+    font-size: 0.9rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .contact-item i {
+    margin-top: 0;
+  }
+}

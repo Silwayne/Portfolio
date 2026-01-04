@@ -25,13 +25,11 @@
         </div>
 
         <div class="footer-legal">
-          <!-- <a href="imprint.html" class="legal-link" data-i18n="footer.imprint">{{ translation.t('footer.imprint') }}</a> -->
           <a class="legal-link" routerLink="/imprint">{{ translation.t("footer.imprint") }}</a>
           <span class="separator">•</span>
-          <!-- <a href="privacy-policy.html" class="legal-link" data-i18n="footer.privacy">{{ translation.t('footer.privacy') }}</a> -->
           <a class="legal-link" routerLink="/privacy">{{ translation.t('footer.privacy') }}</a>
           <span class="separator">•</span>
-          <span class="copyright">© 2024 <span data-i18n="footer.name">{{ translation.t('footer.name') }}</span></span>
+          <span class="copyright">© 2024 {{ translation.t('footer.name') }}</span>
         </div>
       </div>
     </footer>

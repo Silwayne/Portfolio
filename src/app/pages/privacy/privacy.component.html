@@ -1,1 +1,96 @@
-<p>privacy works!</p>
+<app-navbar></app-navbar>
+<main class="legal-page">
+  <section style="padding-top: 100px">
+    <div class="section-header">
+      <h1>{{ translation.t('privacy.title') }}</h1>
+    </div>
+
+    <div class="card">
+      <div class="info">
+        <h2 style="text-align: left; margin-bottom: 2rem">
+          {{ translation.t('privacy.overview') }}
+        </h2>
+
+        <div class="legal-content">
+          <div class="legal-section">
+            <h3>{{ translation.t('privacy.general') }}</h3>
+            <p>{{ translation.t('privacy.general.text') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('privacy.dataCollection') }}</h3>
+            <p>
+              <strong>{{ translation.t('privacy.dataCollection.responsible') }}</strong><br />
+              {{ translation.t('privacy.responsibleParty.definition') }}
+            </p>
+            
+            <h4>{{ translation.t('privacy.dataCollection.how') }}</h4>
+            <p>{{ translation.t('privacy.dataCollection.how.text1') }}</p>
+            <p>{{ translation.t('privacy.dataCollection.how.text2') }}</p>
+            
+            <h4>{{ translation.t('privacy.dataUsage') }}</h4>
+            <p>{{ translation.t('privacy.dataUsage.text') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('privacy.hosting') }}</h3>
+            <p>{{ translation.t('privacy.hosting.text1') }}</p>
+            <p>{{ translation.t('privacy.hosting.text2') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('privacy.rights') }}</h3>
+            <p>{{ translation.t('privacy.rights.text') }}</p>
+            <p>{{ translation.t('privacy.rights.contact') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('privacy.mandatoryInfo') }}</h3>
+            <h4>{{ translation.t('privacy.dataProtection') }}</h4>
+            <p>{{ translation.t('privacy.dataProtection.text1') }}</p>
+            <p>{{ translation.t('privacy.dataProtection.text2') }}</p>
+
+            <h4>{{ translation.t('privacy.responsibleParty') }}</h4>
+            <p>{{ translation.t('privacy.responsibleParty.text') }}</p>
+            <p>
+              <strong>Ronny Pollmer</strong><br />
+              Unterfeldstraße 8<br />
+              85290 Geisenfeld<br />
+              Deutschland
+            </p>
+            <p>
+              E-Mail: career&#64;ronny-pollmer.com<br />
+              Telefon: +49 173 8141417
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('privacy.storageDuration') }}</h3>
+            <p>{{ translation.t('privacy.storageDuration.text') }}</p>
+            
+            <h4>{{ translation.t('privacy.revocation') }}</h4>
+            <p>{{ translation.t('privacy.revocation.text') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('privacy.encryption') }}</h3>
+            <p>{{ translation.t('privacy.encryption.text1') }}</p>
+            <p>{{ translation.t('privacy.encryption.text2') }}</p>
+            
+            <h4>{{ translation.t('privacy.contactForm') }}</h4>
+            <p>{{ translation.t('privacy.contactForm.text1') }}</p>
+            <p>{{ translation.t('privacy.contactForm.text2') }}</p>
+            <p>{{ translation.t('privacy.contactForm.text3') }}</p>
+          </div>
+        </div>
+
+        <div class="back-home">
+          <a [routerLink]="['/']" class="hero-btn secondary">
+            <span>{{ translation.t('privacy.backButton') }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>
