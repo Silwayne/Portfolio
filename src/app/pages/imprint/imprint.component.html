@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<main class="legal-page">
+  <section style="padding-top: 100px">
+    <div class="section-header">
+      <h1>{{ translation.t('imprint.title') }}</h1>
+    </div>
+
+    <div class="card">
+      <div class="info">
+        <h2 style="text-align: left; margin-bottom: 2rem">{{ translation.t('imprint.heading') }}</h2>
+
+        <div class="legal-content">
+          <div class="legal-section">
+            <h3>{{ translation.t('imprint.contact') }}</h3>
+            <p>
+              <strong>Ronny Pollmer</strong><br />
+              Unterfeldstraße 8<br />
+              85290 Geisenfeld<br />
+              Deutschland
+            </p>
+            <p>
+              E-Mail: career&#64;ronny-pollmer.com<br />
+              Telefon: +49 173 8141417
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('imprint.disputeResolution') }}</h3>
+            <p>{{ translation.t('imprint.disputeResolution.text') }} 
+               <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>.
+            </p>
+            <p>{{ translation.t('imprint.disputeResolution.participation') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('imprint.liabilityContent') }}</h3>
+            <p>{{ translation.t('imprint.liabilityContent.text1') }}</p>
+            <p>{{ translation.t('imprint.liabilityContent.text2') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('imprint.copyright') }}</h3>
+            <p>{{ translation.t('imprint.copyright.text1') }}</p>
+            <p>{{ translation.t('imprint.copyright.text2') }}</p>
+          </div>
+
+          <div class="legal-section">
+            <h3>{{ translation.t('imprint.imageCredits') }}</h3>
+            <p [innerHTML]="translation.t('imprint.imageCredits.list')"></p>
+          </div>
+        </div>
+
+        <div class="back-home">
+          <a routerLink="/" class="hero-btn secondary">
+            <span>{{ translation.t("imprint.backButton") }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>
