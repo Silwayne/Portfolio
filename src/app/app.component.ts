@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router'; 
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,20 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit { 
   title = 'portfolio';
+  private router = inject(Router); 
+
+  ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', 
+      });
+    });
+  }
 
   @HostListener('window:scroll', [])
   onScroll() {

@@ -30,13 +30,13 @@
             </div>
 
             <div class="form-group">
-              <input type="email" id="email" name="email" [(ngModel)]="contactData.email" #emailField="ngModel" email placeholder=" " required />
+              <input type="email" id="email" name="email" [(ngModel)]="contactData.email" #emailField="ngModel" email placeholder=" " required pattern="[a-z0-9\._%+\-]+@[a-z0-9\.\-]+\.[a-z]{2,}$" />
               <label for="email">{{ translation.t("contact.form.email")}}</label>
               <div class="error-text" *ngIf="emailField.invalid && emailField.touched">
                 <span *ngIf="emailField.errors?.['required']">
                   {{ translation.t("contact.form.email.error") }}
                 </span>
-                <span *ngIf="emailField.errors?.['email']">
+                <span *ngIf="!emailField.errors?.['required'] && (emailField.errors?.['pattern'] || emailField.errors?.['email'])">
                   {{ translation.t("contact.form.mail.error.invalid") }}
                 </span>
               </div>
