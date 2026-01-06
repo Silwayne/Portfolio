@@ -54,12 +54,17 @@ export class TranslationService {
       'contact.description':
         'Lust auf eine Zusammenarbeit? Ich bin offen für neue berufliche Chancen und freue mich darauf, von Ihnen zu hören. Lassen Sie uns gemeinsam herausfinden, wie ich Ihr Team unterstützen kann!',
       'contact.form.name': 'Dein Name *',
+      'contact.form.name.error': 'Bitte geben Sie Ihren Namen ein.',
       'contact.form.email': 'Deine E-Mail *',
+      'contact.form.email.error': 'Bitte geben Sie eine E-Mail Adresse ein.',
+      'contact.form.mail.error.invalid': 'Bitte geben Sie eine gültige E-Mail Adresse ein.',
       'contact.form.message': 'Deine Nachricht *',
+      'contact.form.message.error': 'Bitte geben Sie eine Nachricht ein.',
       'contact.form.privacy.prefix':
         'Ich stimme zu, dass meine Daten gemäß der ',
       'contact.form.privacy.link': 'Datenschutzerklärung',
       'contact.form.privacy.suffix': ' verarbeitet werden dürfen. ',
+      'contact.form.error.privacy': 'Bitte stimmen Sie der Datenschutzerklärung zu, um fortzufahren.',
       'contact.form.submit': 'Nachricht senden',
       'contact.successMessage': 'Vielen Dank! Deine Nachricht wurde gesendet.',
 
@@ -210,12 +215,17 @@ export class TranslationService {
       'contact.description':
         'Looking for a collaboration? I am currently open to new career opportunities and look forward to hearing from you. Let’s find out how I can support your team!',
       'contact.form.name': 'Your Name *',
+      'contact.form.name.error': 'Please enter your name.',
       'contact.form.email': 'Your Email *',
+      'contact.form.email.error': 'Please enter your email address.',
+      'contact.form.mail.error.invalid': 'Please enter a valid email address.',
       'contact.form.message': 'Your Message *',
+      'contact.form.message.error': 'Please enter a message.',
       'contact.form.privacy.prefix':
         'I agree that my data may be processed in accordance with the ',
       'contact.form.privacy.link': 'Privacy Policy',
       'contact.form.privacy.suffix': '.',
+      'contact.form.error.privacy': 'Please agree to the privacy policy to proceed.',
       'contact.form.submit': 'Send Message',
       'contact.successMessage': 'Thank you! Your message has been sent.',
 

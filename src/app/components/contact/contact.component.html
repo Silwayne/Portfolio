@@ -11,39 +11,57 @@
         <div class="contact-info">
           <a href="mailto:career@ronny-pollmer.com" class="contact-link">
             <img src="./assets/profile/envelope.png" alt="" />
-            <span>career&#64;ronny-pollmer.com</span>
+            <span> career&#64;ronny-pollmer.com </span>
           </a>
           <a href="tel:+49 173 8141417" class="contact-link">
             <img src="./assets/profile/phone.png" alt="" />
-            <span>0173 8141417</span>
+            <span> 0173 8141417 </span>
           </a>
         </div>
 
         <form class="contact-form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
           <div class="form-row">
             <div class="form-group">
-              <input type="text" id="name" name="name" [(ngModel)]="contactData.name" placeholder=" " required/>
+              <input type="text" id="name" name="name" [(ngModel)]="contactData.name" #nameField="ngModel" placeholder=" " required />
               <label for="name">{{ translation.t("contact.form.name") }}</label>
+              <span class="error-text" *ngIf="nameField.invalid && nameField.touched">
+                {{ translation.t("contact.form.name.error") }}
+              </span>
             </div>
 
             <div class="form-group">
-              <input type="email" id="email" name="email" [(ngModel)]="contactData.email" #emailField="ngModel" email placeholder=" " required/>
-              <label for="email">{{ translation.t("contact.form.email") }}</label>
+              <input type="email" id="email" name="email" [(ngModel)]="contactData.email" #emailField="ngModel" email placeholder=" " required />
+              <label for="email">{{ translation.t("contact.form.email")}}</label>
+              <div class="error-text" *ngIf="emailField.invalid && emailField.touched">
+                <span *ngIf="emailField.errors?.['required']">
+                  {{ translation.t("contact.form.email.error") }}
+                </span>
+                <span *ngIf="emailField.errors?.['email']">
+                  {{ translation.t("contact.form.mail.error.invalid") }}
+                </span>
+              </div>
             </div>
           </div>
 
           <div class="form-group full-width">
-            <textarea id="message" name="message" rows="5" [(ngModel)]="contactData.message" placeholder=" " required></textarea>
+            <textarea id="message" name="message" rows="5" [(ngModel)]="contactData.message" #messageField="ngModel" placeholder=" " required></textarea>
             <label for="message">{{ translation.t("contact.form.message") }}</label>
+            <span class="error-text" *ngIf="messageField.invalid && messageField.touched">
+              {{ translation.t("contact.form.message.error") }}
+            </span>
           </div>
 
           <div class="privacy-checkbox">
-            <input type="checkbox" id="privacy" name="privacy" ngModel required/>
+            <input type="checkbox" id="privacy" name="privacy" #privacyCheck="ngModel" [(ngModel)]="contactData.privacy" required />
             <label for="privacy">
               <span>{{ translation.t("contact.form.privacy.prefix") }}</span>
-              <a routerLink="/privacy" target="_blank" class="privacy-link"> {{ translation.t("contact.form.privacy.link") }}</a>
+              <a class="privacy-link" routerLink="/privacy">{{ translation.t("contact.form.privacy.link") }}</a>
               <span>{{ translation.t("contact.form.privacy.suffix") }}</span>
             </label>
+          </div>
+
+          <div class="error-text privacy-error" *ngIf=" privacyCheck.invalid && (contactForm.touched || contactForm.submitted)">
+            {{ translation.t("contact.form.error.privacy") }}
           </div>
 
           <button type="submit" class="submit-btn" [disabled]="!contactForm.form.valid">

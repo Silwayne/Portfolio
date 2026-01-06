@@ -21,6 +21,7 @@ export class ContactComponent {
     name: '',
     email: '',
     message: '',
+    privacy: false
   };
 
   showSuccess = false;
@@ -37,26 +38,23 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
-      
-      if (!this.mailTest) {
-        this.http.post(this.post.endPoint, this.post.body(this.contactData))
-          .subscribe({
-            next: (response) => {
-              this.triggerSuccess(ngForm);
-            },
-            error: (error) => {
-              console.error(error);
-            },
-            complete: () => console.info('send post complete'),
-          });
-      } else {
-        console.log('Formular gültig (Testmodus) - Daten:', this.contactData);
-        this.triggerSuccess(ngForm);
-      }
+onSubmit(ngForm: NgForm) {
+  if (ngForm.submitted && ngForm.form.valid) {
+    if (!this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            this.triggerSuccess(ngForm);
+          },
+          error: (error) => {
+            console.error('Mail Error:', error);
+          }
+        });
+    } else {
+      this.triggerSuccess(ngForm);
     }
   }
+}
 
   private triggerSuccess(ngForm: NgForm) {
     this.showSuccess = true;
